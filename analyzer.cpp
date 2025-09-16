@@ -45,7 +45,7 @@ int main() {
         }
     }
 
-    arquivo.close(); // Fecha o arquivo
+    arquivo.close(); 
 
     // --- Geração do Relatório ---
     std::cout << "====== Relatorio de Analise de Log ======" << std::endl;
@@ -60,5 +60,5 @@ int main() {
         std::cout << "- IP: " << par.first << "\t| Tentativas: " << par.second << std::endl;
     }
 
-    return 0; // Sucesso
+    return 0; 
 }
