@@ -1,31 +1,51 @@
-# Analisador de Logs de Segurança em C++
+# 🔍 Analisador de Logs de Segurança em C++
 
-Um programa simples em C++ que lê um arquivo de log, encontra tentativas de login falhas e gera um relatório com a contagem por endereço de IP.
+Um programa simples em **C++** que lê arquivos de log do sistema (como `auth.log`) e gera um relatório com a contagem de tentativas de login falhas por endereço de IP.
 
-## Demonstração
+## 📋 Funcionalidades
 
-![Resultado da Execução](screenshots/resultado_execucao.png)
+-   Procura por tentativas de login mal-sucedidas (`Failed password`).
+-   Extrai e contabiliza os IPs responsáveis.
+-   Mostra os resultados ordenados pelo número de tentativas.
 
-## Tecnologias
+## 🚀 Como Executar
 
-- C++ 
-- Compilador g++
-- Ambiente Linux / WSL (Ubuntu)
-
-## Como Executar
-
-No seu terminal Linux ou WSL, siga os passos:
+### 1. Clone o repositório
 
 ```bash
-# 1. Clone este repositório
-git clone [https://github.com/SEU-USUARIO/log-analyzer.git](https://github.com/SEU-USUARIO/log-analyzer.git)
+git clone https://github.com/SEU-USUARIO/log-analyzer.git
+cd log-analyzer
+```
 
-# 2. Entre no diretório
-cd analisador-cognyte
+### 2. Compile o programa
 
-# 3. Compile o programa
-g++ -o analisador analisador.cpp -std=c++11
+```bash
+g++ -o analisador analyzer.cpp -std=c++11
+```
 
-# 4. Execute
+### 3. Execute
+
+```bash
 ./analisador
 ```
+
+> **Nota:** Por padrão, o programa lê o arquivo `auth.log` na mesma pasta. Se quiser, você pode editar o código para analisar outro arquivo de log.
+
+
+## 🖥️ Demonstração
+
+Abaixo, um exemplo da saída do programa ao analisar um arquivo de log de exemplo:
+
+![Resultado da Execução](screenshots/execution-result.png)
+
+---
+
+## 🔧 Tecnologias Utilizadas
+
+-   C++
+-   g++
+-   Linux / WSL (Ubuntu)
+
+## 📌 Sobre
+
+*Projeto criado para estudo e prática de análise de logs em segurança da informação.*
