@@ -1,19 +1,21 @@
 # 🔍 Analisador de Logs de Segurança em C++
 
-Um programa simples em **C++** que lê arquivos de log do sistema (como `auth.log`) e gera um relatório com a contagem de tentativas de login falhas por endereço de IP.
+Um programa em C++ que lê arquivos de log do sistema (como auth.log) e gera um relatório com a contagem de tentativas de login falhas por endereço de IP, ajudando a identificar potenciais ataques de força bruta.
 
 ## 📋 Funcionalidades
 
--   Procura por tentativas de login mal-sucedidas (`Failed password`).
--   Extrai e contabiliza os IPs responsáveis.
--   Mostra os resultados ordenados pelo número de tentativas.
+- Detecção Flexível: Utiliza expressões regulares para detectar uma ampla variedade de tentativas de login mal-sucedidas (ex: Failed password, invalid user, Authentication failure).
+
+- Extração de IPs: Identifica e extrai endereços de IP (suportando IPv4 e IPv6) das linhas de log relevantes.
+
+- Relatório Ordenado: Contabiliza as tentativas por IP e exibe um relatório claro com os endereços mais ativos ordenados de forma decrescente.
 
 ## 🚀 Como Executar
 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/SEU-USUARIO/log-analyzer.git
+git clone https://github.com/GustavoKnocs/log-analyzer.git
 cd log-analyzer
 ```
 
